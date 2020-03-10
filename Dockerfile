@@ -1,10 +1,8 @@
 FROM openjdk:8-jdk-alpine
 
-ARG VERSION
-
 ENV DIST_MIRROR             https://archive.apache.org/dist/nifi/minifi
 ENV MINIFI_TOOLKIT_HOME     /opt/minifi-toolkit
-ENV VERSION                 ${VERSION}
+ENV VERSION                 0.5.0
 
 RUN set -x && \
     apk --no-cache add tar wget && \
